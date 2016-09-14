@@ -1,0 +1,65 @@
+08-04 18:03:08 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: Writing to cache:nio:H:/h2-dbs/project.mv.db failed; length 4096 at 16384 [1.4.187/2]" [50000-187]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:368)
+	at org.h2.mvstore.MVStore.write(MVStore.java:773)
+	at org.h2.mvstore.MVStore.storeNowTry(MVStore.java:1115)
+	at org.h2.mvstore.MVStore.storeNow(MVStore.java:973)
+	at org.h2.mvstore.MVStore.commitAndSave(MVStore.java:962)
+	at org.h2.mvstore.MVStore.compactRewrite(MVStore.java:1817)
+	at org.h2.mvstore.MVStore.compact(MVStore.java:1701)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:2393)
+	at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:2583)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: Writing to cache:nio:H:/h2-dbs/project.mv.db failed; length 4096 at 16384 [1.4.187/2]" [50000-187]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 12 more
+Caused by: java.lang.IllegalStateException: Writing to cache:nio:H:/h2-dbs/project.mv.db failed; length 4096 at 16384 [1.4.187/2]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:466)
+	at org.h2.mvstore.FileStore.writeFully(FileStore.java:113)
+	at org.h2.mvstore.MVStore.write(MVStore.java:771)
+	... 7 more
+Caused by: java.io.IOException: The system cannot find the file specified
+	at sun.nio.ch.FileDispatcherImpl.pwrite0(Native Method)
+	at sun.nio.ch.FileDispatcherImpl.pwrite(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.FileChannelImpl.writeInternal(Unknown Source)
+	at sun.nio.ch.FileChannelImpl.write(Unknown Source)
+	at org.h2.store.fs.FileNio.write(FilePathNio.java:79)
+	at org.h2.mvstore.cache.FilePathCache$FileCache.write(FilePathCache.java:123)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:462)
+	... 9 more
+08-11 16:36:08 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: Could not truncate file nio:H:/h2-dbs/project.mv.db to size 425984 [1.4.187/2]" [50000-187]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:368)
+	at org.h2.mvstore.MVStore.storeNow(MVStore.java:975)
+	at org.h2.mvstore.MVStore.commitAndSave(MVStore.java:962)
+	at org.h2.mvstore.MVStore.compactRewrite(MVStore.java:1817)
+	at org.h2.mvstore.MVStore.compact(MVStore.java:1701)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:2393)
+	at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:2583)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: Could not truncate file nio:H:/h2-dbs/project.mv.db to size 425984 [1.4.187/2]" [50000-187]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 10 more
+Caused by: java.lang.IllegalStateException: Could not truncate file nio:H:/h2-dbs/project.mv.db to size 425984 [1.4.187/2]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.truncate(FileStore.java:237)
+	at org.h2.mvstore.MVStore.shrinkFileIfPossible(MVStore.java:1434)
+	at org.h2.mvstore.MVStore.storeNowTry(MVStore.java:1157)
+	at org.h2.mvstore.MVStore.storeNow(MVStore.java:973)
+	... 5 more
+Caused by: java.io.IOException: The specified network name is no longer available
+	at sun.nio.ch.FileDispatcherImpl.truncate0(Native Method)
+	at sun.nio.ch.FileDispatcherImpl.truncate(Unknown Source)
+	at sun.nio.ch.FileChannelImpl.truncate(Unknown Source)
+	at org.h2.store.fs.FileNio.truncate(FilePathNio.java:87)
+	at org.h2.mvstore.cache.FilePathCache$FileCache.truncate(FilePathCache.java:116)
+	at org.h2.mvstore.FileStore.truncate(FileStore.java:234)
+	... 8 more
+08-11 16:36:10 database: could not close the database
