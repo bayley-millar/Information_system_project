@@ -1,0 +1,31 @@
+SMAP
+view_005fproducts_jsp.java
+JSP
+*S JSP
+*F
++ 0 view_products.jsp
+view_products.jsp
++ 1 navigation_menu.jspf
+WEB-INF/jspf/navigation_menu.jspf
+*L
+5,15:54
+1#1,5:69
+7,7:75
+13,8:82
+20,2:89
+21,7:91
+27:97,2
+19#0,3:99
+23,3:102
+26,12:106
+37:118
+38:119,6
+39:125,3
+40,9:128
+49:137,3
+50:140
+51,7:141,3
+58:162
+59:163,3
+60,4:166
+*E

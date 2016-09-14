@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/09/2015, 4:14:47 PM
+    Author     : milba845
+*/
+
+body{
+    width: 100%;
+    background-color: #CCCCFF;
+    font-family: sans-serif;
+    
+}
+
+h1{
+    text-align: center;
+    
+}
+p{
+    text-align: center;
+}
+
+form{
+ width: 800px;
+ margin: 0 auto;
+ text-align: center;
+       
+}
+#frm{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 14px;
+}
+#wrapper{
+    
+    text-align: center;
+    vertical-align:middle;
+}
+#wrapper ul{
+    
+   line-height: 20px;
+   
+}
+#wrapper ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.login{
+ width: 800px;
+ margin: 0 auto;
+ text-align: center;
+    
+}
+.login a{ 
+padding-top: 10px;
+}
+.cart{
+     width: 800px;
+ margin: 0 auto;
+ text-align: center;
+}
+.main{
+     width: 800px;
+ margin: 0 auto;
+ text-align: center;
+}
+
+table{
+     width: 200px;
+ margin: 0 auto;
+ border: 1px solid black;
+ 
+}
+nav{
+    text-align: center;
+    
+}
+
+nav ul li{
+    
+  padding-right:20px;
+  font-size: 50px;
+  list-style-type: none;
+  display: inline;
+}
+nav ul li a{
+    text-decoration: none;
+}
+
+
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: white;
+}

@@ -1,0 +1,27 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="domain.Order"%>
+<%@page import="domain.Customer"%>
+<%@ page pageEncoding="UTF-8" %>
+<%
+
+    Customer customer = (Customer) session.getAttribute("customer");
+    Order order = (Order) session.getAttribute("order");
+    if (order == null) {
+        session.setAttribute("order", new Order(customer));
+    }
+    if (customer != null) {
+%>
+<a href="home.jsp">Home</a>
+<a href="view_products.jsp">Browse Products</a>
+<a href="checkout.jsp">View Cart</a>
+<a href="Log_out_servlet">Log out</a>
+
+
+<%} else {
+%>
+
+<a href="home.jsp">Home</a>
+<a href="view_products.jsp">Browse Products</a>
+<a href="checkout.jsp">View Cart</a>
+<a href="log_in.jsp">Log in</a>
+<%}%>

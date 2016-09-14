@@ -1,0 +1,19 @@
+SMAP
+home_jsp.java
+JSP
+*S JSP
+*F
++ 0 home.jsp
+home.jsp
++ 1 navigation_menu.jspf
+WEB-INF/jspf/navigation_menu.jspf
+*L
+5,12:51
+1#1,5:63
+7,7:69
+13,8:76
+20,2:83
+21,7:85
+27:91,2
+16#0,7:93
+*E
